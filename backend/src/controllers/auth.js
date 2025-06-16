@@ -8,7 +8,7 @@ const register = async(req,res) => {
     try {
         const {username, email, password} = req.body;
 
-        const user = await AuthSchema.findOne(email)
+        const user = await AuthSchema.findOne({email})
 
         if (user) {
             return res.status(409).json({msg: "Böyle bir kullanıcı zaten mevcut!"})
@@ -23,7 +23,7 @@ const register = async(req,res) => {
         //Bu sayı ne kadar yüksekse, hash işlemi o kadar uzun sürer (daha güvenli olur).
 
         if (!isEmail(email)) {
-            return res.status(401).json({msg: "Hatalı format!"})
+            return res.status(401).json({msg: "Mail hatası!"})
         }
 
         const newUser = await AuthSchema.create({username, email, password: passwordHash})
@@ -49,7 +49,7 @@ const register = async(req,res) => {
 const login = async(req,res) => {
     try {
         const {email,password} = req.body
-        const user = await AuthSchema.findOne(email)
+        const user = await AuthSchema.findOne({email})
         if (!user) {
             return res.status(409).json({msg: "Kullanıcı bulunamadı!"})
         }
@@ -76,14 +76,19 @@ const login = async(req,res) => {
 
 function isEmail(emailAdress){
     let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(emailAdress);
+}
+
+/* function isEmail(emailAdress){
+    let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (emailAdress.match(regex)) 
         return true;
 
     else 
-        return true;
+        return false;
     
-}
+} */
 
 
 
