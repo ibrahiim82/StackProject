@@ -3,6 +3,7 @@ import Home from './pages/home'
 import Auth from './pages/auth'
 import { ToastContainer} from 'react-toastify';
 import useToken from './hooks/useToken';
+import Navbar from './components/Navbar';
 
 function App() {
   const [token] = useToken()
@@ -12,6 +13,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+      {token.token && <Navbar/>}
         <Routes>
           <Route path="/" element={!token.token ? <Link to={'/auth'} /> : <Home />} />
           <Route path="/auth" element={<Auth />} />
