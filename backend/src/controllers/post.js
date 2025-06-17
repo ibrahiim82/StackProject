@@ -14,9 +14,9 @@ const getPosts = async(req,res) => {
 const createPost = async(req,res) => {
     try {
 
-        const newPosts = await PostSchema.create(req.body)
+        const newPost = await PostSchema.create(req.body)
 
-        res.status(201).json(newPosts)
+        res.status(201).json(newPost)
 
     } catch (error) {
         res.status(500).json({msg: error.message})
