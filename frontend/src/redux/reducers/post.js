@@ -12,16 +12,24 @@ const postReducer = (state = {posts: []}, action) => {
             }
         case "UPDATE_POST":
             return {
-                posts : [state.posts.map(post => post._id === action.payload._id ? action.payload : post)]
+                posts : state.posts.map(post => post._id === action.payload._id ? action.payload : post)
             }
         case "DELETE_POST":
             return {
-                posts : [state.posts.filter((post) => post._id !== action.payload)]
+                posts : state.posts.filter(post => post._id !== action.payload)
             }
         default:
             return state
     }
 }
 
+        // case "UPDATE_POST":
+        //     return {
+        //         posts : [state.posts.map(post => post._id === action.payload._id ? action.payload : post)]
+        //     }
+        // case "DELETE_POST":
+        //     return {
+        //         posts : [state.posts.filter((post) => post._id !== action.payload)]
+        //     }
 
 export default postReducer
