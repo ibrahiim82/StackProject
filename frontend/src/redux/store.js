@@ -2,12 +2,14 @@ import { combineReducers } from "redux";
 import { configureStore } from '@reduxjs/toolkit'
 import authReducer from "./reducers/auth";
 import modalReducer from "./reducers/modal";
+import postReducer from "./reducers/post";
 
 const initialState = {};
 
 const rootReducer = combineReducers({
   auth: authReducer,
-  modal:modalReducer
+  modal: modalReducer,
+  post: postReducer
 });
 
 const store = configureStore({
