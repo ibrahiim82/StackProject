@@ -4,6 +4,8 @@ import useToken from './hooks/useToken';
 import Navbar from './components/Navbar';
 import Modal from './components/Modal';
 import { useSelector } from 'react-redux';
+import Home from './pages/Home';
+import Auth from './pages/Auth';
 
 
 
