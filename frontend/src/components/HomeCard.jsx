@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HomeCard = () => {
+const HomeCard = ({post}) => {
   return (
     <div>HomeCard</div>
   )
