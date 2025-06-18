@@ -14,6 +14,7 @@ const Modal = () => {
 
     const postCreate = () => {
         dispatch(createPostAction(postData))
+        dispatch({type:'MODAL', payload:false})
     }
   return (
     <div className='w-full h-screen bg-opacity-50 bg-black fixed inset-0 z-50 flex items-center justify-center'>
