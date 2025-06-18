@@ -9,7 +9,7 @@ const initialState = {};
 const rootReducer = combineReducers({
   auth: authReducer,
   modal: modalReducer,
-  post: postReducer
+  posts: postReducer
 });
 
 const store = configureStore({

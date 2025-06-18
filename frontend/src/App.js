@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
-import Home from './pages/home'
-import Auth from './pages/auth'
 import { ToastContainer} from 'react-toastify';
 import useToken from './hooks/useToken';
 import Navbar from './components/Navbar';
 import Modal from './components/Modal';
 import { useSelector } from 'react-redux';
+
+
 
 function App() {
   const [token] = useToken()

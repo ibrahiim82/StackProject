@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { IoMdClose } from "react-icons/io";
 import { useDispatch } from "react-redux";
+import { createPostAction } from "../redux/actions/post";
 
 const Modal = () => {
     const [postData, setPostData] = useState({user:"", title:"", description:""})
@@ -9,6 +10,10 @@ const Modal = () => {
 
     const onChangeFunc = (e) => {
         setPostData({...postData, [e.target.name] : e.target.value})
+    }
+
+    const postCreate = () => {
+        dispatch(createPostAction(postData))
     }
   return (
     <div className='w-full h-screen bg-opacity-50 bg-black fixed inset-0 z-50 flex items-center justify-center'>
@@ -22,7 +27,7 @@ const Modal = () => {
                 <input value={postData.title} name="title" onChange={onChangeFunc} className='input-style' type="text" placeholder='Title' />
                 <input value={postData.description} name="description" onChange={onChangeFunc} className='input-style' type="text" placeholder='Description' />
             </div>
-            <div className='w-full p-2 text-center bg-lime-500 text-white cursor-pointer hover:bg-lime-600'>Paylaş</div>
+            <div onClick={postCreate} className='w-full p-2 text-center bg-lime-500 text-white cursor-pointer hover:bg-lime-600'>Paylaş</div>
         </div>
     </div>
   )

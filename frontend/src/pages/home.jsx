@@ -1,9 +1,13 @@
-import React from 'react'
+import { useSelector } from 'react-redux'
 
-const home = () => {
+const Home = () => {
+
+  const {posts} = useSelector(state => state.posts)
+
+  console.log("Posts:", posts);
   return (
-    <div>home</div>
+    <div>Home</div>
   )
 }
 
-export default home
+export default Home
