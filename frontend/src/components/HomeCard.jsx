@@ -2,7 +2,7 @@ import React from 'react'
 
 const HomeCard = ({post}) => {
   return (
-    <div>HomeCard</div>
+    <div className='w-1/4 border p-3 rounded-md bg-gray-50'>HomeCard</div>
   )
 }
 
