@@ -2,6 +2,7 @@ import { useState } from "react"
 import { IoMdClose } from "react-icons/io";
 import { useDispatch } from "react-redux";
 import { createPostAction } from "../redux/actions/post";
+import { toast } from "react-toastify";
 
 const Modal = () => {
     const [postData, setPostData] = useState({user:"", title:"", description:""})
@@ -15,6 +16,10 @@ const Modal = () => {
     const postCreate = () => {
         dispatch(createPostAction(postData))
         dispatch({type:'MODAL', payload:false})
+        toast("Ekleme işlmei başarılı", {
+                    position: "top-right",
+                    autoClose: 5000,
+                    });
     }
   return (
     <div className='w-full h-screen bg-opacity-50 bg-black fixed inset-0 z-50 flex items-center justify-center'>
