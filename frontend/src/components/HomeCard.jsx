@@ -10,7 +10,7 @@ const HomeCard = ({post}) => {
   const dispatch = useDispatch()
 
   const updatePost = (id) => {
-    
+      dispatch({type:'MODAL', payload: {open:true, updateId: id}})
   }
   const deletePost = (id) => {
       dispatch(deletePostAction(id))
@@ -29,8 +29,8 @@ const HomeCard = ({post}) => {
         <span className='text-xs text-gray-500'>{(post?.date)?.substring(0,10)}</span>
       </div>
       <div className='absolute top-0.5 right-1 flex items-center space-x-4'>
-        <RxUpdate onClick={() => updatePost(post._id)} size={17} title='update' className='cursor-pointer'/>
-        <MdDeleteOutline onClick={() => deletePost(post._id)} size={21} title='delete' className='cursor-pointer'/>
+        <RxUpdate onClick={() => updatePost(post._id)} size={17} title='güncelle' className='cursor-pointer'/>
+        <MdDeleteOutline onClick={() => deletePost(post._id)} size={21} title='sil' className='cursor-pointer'/>
       </div>
     </div>
   )
