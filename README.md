@@ -4,7 +4,7 @@ StackProject is a full-stack MERN (MongoDB, Express, React, Node.js) authenticat
 
 ## 🔗 Live Demo
 
-- **Frontend (Vercel)**: [stack-project-fe.vercel.app](https://stack-project-gjtnrdpj3-ibrahims-projects-4a2154f0.vercel.app)  
+- **Frontend (Vercel)**: [stack-project-fe.vercel.app](https://stack-project-fe.vercel.app/) 
 - **Backend (Render)**: [stackprojectbe.onrender.com](https://stackprojectbe.onrender.com)
 
 ## 🚀 Features
