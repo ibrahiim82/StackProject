@@ -7,6 +7,12 @@ StackProject is a full-stack MERN (MongoDB, Express, React, Node.js) authenticat
 - **Frontend (Vercel)**: [stack-project-fe.vercel.app](https://stack-project-fe.vercel.app/) 
 - **Backend (Render)**: [stackprojectbe.onrender.com](https://stackprojectbe.onrender.com)
 
+## 🧪 Test User
+
+- User: testuser
+- Email: test@example.com  
+- Password: 123456
+
 ## 🚀 Features
 
 - User registration & login
