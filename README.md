@@ -17,7 +17,7 @@ StackProject is a full-stack MERN (MongoDB, Express, React, Node.js) authenticat
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React, Vite, Axios, React Router
+- **Frontend**: React, JS, Axios, React Router
 - **Backend**: Node.js, Express.js, MongoDB, Mongoose
 - **Other**: JWT, Bcrypt.js, Vercel, Render
 
